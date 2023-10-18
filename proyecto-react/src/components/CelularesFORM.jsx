@@ -3,16 +3,22 @@ import React from "react";
 function CelularesFORM(){
 
     return(
-        <body className="bg-danger" style={{height: "539px"}}>
+        <body className="bg-danger" style={{height: "700px"}}>
             
             <div>
                
-                <h1 className="text-white text-center mb-5">Tienda de Celulares</h1>
+                <h1 className="text-white text-center pt-3">Tienda de Celulares</h1>
                 <button className="btn btn-dark btn-lg rounded-0 rounded-end-4">Ir a Tienda de Celulares</button>
                 <h3 className="text-white text-center mt-4">Ingreso de Inventario</h3>
             </div>
-            <div className="bg-dark position-relative rounded-3 m-4" style={{height: "300px", width: "55%"}} >
-                <div className="d-inline-block w-50 position-relative text-center mt-2">
+            <div className="bg-dark position-relative pt-4 rounded-3" style={{height: "400px", width: "55%", marginLeft: "22%"}} >
+
+                <div className="form-floating pt-3 ms-5 me-5 ps-5 pe-5">
+                    <input type="text" className="form-control" />
+                    <label htmlFor="" className="text-black ms-5" >ID:</label>
+                </div>
+
+                <div className="d-inline-block w-50 position-relative text-center ">
                     <div className="form-floating m-3">
                         <input type="text" className="form-control" />
                         <label htmlFor="" className="text-black" >Marca:</label>
@@ -33,15 +39,23 @@ function CelularesFORM(){
 
                     <button className="btn btn-danger">Agregar</button>
                 </div>
-                <div className="d-inline-block w-50 position-relative text-center">
-                    <label htmlFor="" className="text-white">Descripcion</label>
-                    <input type="text" className="form-control" />
-
-                    <label htmlFor="" className="text-white">Precio</label>
-                    <input type="text" className="form-control"/>
-
-                    <label htmlFor="" className="text-white">Operadora</label>
-                    <input type="text" className="form-control" />
+                
+                <div className="d-inline-block w-50 position-relative text-center ">
+                    <div className="form-floating m-3">
+                        <input type="text" className="form-control" />
+                        <label htmlFor="" className="text-black">Descripcion:</label>
+                    </div>
+                    
+                    <div className="form-floating m-3">
+                        <input type="text" className="form-control"/>
+                        <label htmlFor="" className="text-black">Precio:</label>
+                    </div>
+                    
+                    <div className="form-floating m-3">
+                        <input type="text" className="form-control" />
+                        <label htmlFor="" className="text-black">Operadora:</label>
+                    </div>
+                    
 
                     <button className="btn btn-danger">Cancelar</button>
                 </div>
