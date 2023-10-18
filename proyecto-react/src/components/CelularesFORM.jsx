@@ -11,30 +11,39 @@ function CelularesFORM(){
                 <button className="btn btn-dark btn-lg rounded-0 rounded-end-4">Ir a Tienda de Celulares</button>
                 <h3 className="text-white text-center mt-4">Ingreso de Inventario</h3>
             </div>
-            <div>
-                <div>
-                    <label htmlFor="">Marca</label>
-                    <input type="text" />
+            <div className="bg-dark position-relative rounded-3 m-4" style={{height: "300px", width: "55%"}} >
+                <div className="d-inline-block w-50 position-relative text-center mt-2">
+                    <div className="form-floating m-3">
+                        <input type="text" className="form-control" />
+                        <label htmlFor="" className="text-black" >Marca:</label>
+                    </div>
+                    
 
-                    <label htmlFor="">Modelo</label>
-                    <input type="text" />
+                    <div className="form-floating m-3">
+                        <input type="text" className="form-control"/>
+                        <label htmlFor="" className="text-black">Modelo:</label>
+                    </div>
+                    
 
-                    <label htmlFor="">Color</label>
-                    <input type="text" />
+                    <div className="form-floating m-3">
+                        <input type="text" className="form-control"/>
+                        <label htmlFor="" className="text-black">Color:</label>
+                    </div>
+                    
 
-                    <button>Agregar</button>
+                    <button className="btn btn-danger">Agregar</button>
                 </div>
-                <div>
-                    <label htmlFor="">Descripcion</label>
-                    <input type="text" />
+                <div className="d-inline-block w-50 position-relative text-center">
+                    <label htmlFor="" className="text-white">Descripcion</label>
+                    <input type="text" className="form-control" />
 
-                    <label htmlFor="">Precio</label>
-                    <input type="text" />
+                    <label htmlFor="" className="text-white">Precio</label>
+                    <input type="text" className="form-control"/>
 
-                    <label htmlFor="">Operadora</label>
-                    <input type="text" />
+                    <label htmlFor="" className="text-white">Operadora</label>
+                    <input type="text" className="form-control" />
 
-                    <button>Cancelar</button>
+                    <button className="btn btn-danger">Cancelar</button>
                 </div>
             </div>
         </body>
