@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 function CelularesFORM(){
 
     return(
-        <body className="bg-danger pb-5" style={{height: "100vh"}}>
+        <body className="bg-danger " style={{height: "100vh"}}>
             
             <div>
                
-                <h1 className="text-white text-center pt-3">Tienda de Celulares</h1>
+                <h1 className="text-white text-center pt-3 ">Tienda de Celulares</h1>
                 <Link to={"/celulares"} className="btn btn-dark btn-lg rounded-0 rounded-end-4">Ir a Tienda de Celulares</Link>
                 <h3 className="text-white text-center mt-4 mb-3">Ingreso de Inventario</h3>
             </div>
