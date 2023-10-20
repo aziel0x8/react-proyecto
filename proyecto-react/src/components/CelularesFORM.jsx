@@ -3,13 +3,13 @@ import React from "react";
 function CelularesFORM(){
 
     return(
-        <body className="bg-danger" style={{height: "700px"}}>
+        <body className="bg-danger pb-5" style={{height: "100vh"}}>
             
             <div>
                
                 <h1 className="text-white text-center pt-3">Tienda de Celulares</h1>
                 <button className="btn btn-dark btn-lg rounded-0 rounded-end-4">Ir a Tienda de Celulares</button>
-                <h3 className="text-white text-center mt-4">Ingreso de Inventario</h3>
+                <h3 className="text-white text-center mt-4 mb-3">Ingreso de Inventario</h3>
             </div>
             <div className="bg-dark position-relative pt-4 rounded-3" style={{height: "400px", width: "55%", marginLeft: "22%"}} >
 
