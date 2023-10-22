@@ -9,8 +9,8 @@ function Menu(){
             
             
             
-            <Link to={"/viedeoJuegosFORM"}>VJ-FORM</Link>
-            <Link to={"/celularesFORM"}>cel-FORM</Link>
+            {/* <Link to={"/viedeoJuegosFORM"}>VJ-FORM</Link>
+            <Link to={"/celularesFORM"}>cel-FORM</Link> */}
 
             <nav className="navbar navbar-expand-lg text-white bg-dark bg-gradient">
                 <div className="container-fluid">
