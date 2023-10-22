@@ -44,8 +44,8 @@ function VideoJuegosCRUD() {
                                     <td>{item.precio}</td>
                                     <td>{item.cantidad}</td>
                                     <td>
-                                        <button className="btn btn-danger btn-sm mr-2">Eliminar</button>
-                                        <button className="btn btn-secondary btn-sm">Editar</button>
+                                        <Link to={"/viedeoJuegosFORM"} className="btn btn-danger btn-sm mr-2">Eliminar</Link>
+                                        <Link to={"/viedeoJuegosFORM"} className="btn btn-secondary btn-sm">Editar</Link>
                                     </td>
                                 </tr>
                             ))}
