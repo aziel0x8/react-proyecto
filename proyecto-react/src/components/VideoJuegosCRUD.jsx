@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function VideoJuegosCRUD() {
 
     const dummyData = [
@@ -21,7 +21,8 @@ function VideoJuegosCRUD() {
             <div className="container-fluid">
 
                 <h1 className="text-white text-center pt-3">Tienda de Video Juegos</h1>
-                <button className="btn btn-danger btn-lg rounded-0 rounded-end-4 mb-4">Ingresar nuevo registro</button>
+                {/* <button className="btn btn-danger btn-lg rounded-0 rounded-end-4 mb-4">Ingresar nuevo registro</button> */}
+                <Link to={"/viedeoJuegosFORM"} className="btn btn-danger btn-lg rounded-0 rounded-end-4 mb-4">Ingresar nuevo registro</Link>
                 <h3 className="text-white text-center mt-4">Consultar Inventario</h3>
 
                 <div className="col-md-10 mx-auto mt-4">
