@@ -5,7 +5,7 @@ function CelularesCRUD(){
 
     return(
 
-        <body className="bg-danger" style={{height: "100vh"}}>
+        <div className="bg-danger pb-5" style={{height: "100vh"}}>
             
             <div>
                 <h1 className="text-white text-center pt-3">Tienda de Celulares</h1>
@@ -45,7 +45,7 @@ function CelularesCRUD(){
                     </table>
             </div>
             </div>
-        </body>
+        </div>
     )
         
 }

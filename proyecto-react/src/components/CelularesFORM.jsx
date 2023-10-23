@@ -1,10 +1,34 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function CelularesFORM(){
+function CelularesFORM({api}){
+
+    const[marca, setMarca] = useState("")
+    const[modelo, setModelo] = useState ("")
+    const[color, setColor] = useState("")
+    const[descripcion, setDescripcion] = useState("")
+    const[precio, setPrecio] = useState("")
+    const[operadora, setOperadora] = useState("")
+
+    const navigate = useNavigate()
+
+    function enviar(event){
+        event.preventDefault()
+        event.stopPropagation()
+
+        let form = document.querySelector(".needs-validation")
+
+        if(!form.checkValidity()){
+            form.classList.add("was-validated")
+        }
+        else{
+            alert("Pasó la validacion")
+        } 
+    }
 
     return(
-        <body className="bg-danger " style={{height: "100vh"}}>
+        <div className="bg-danger pb-5" style={{height: "100%"}}>
             
             <div>
                
@@ -12,56 +36,68 @@ function CelularesFORM(){
                 <Link to={"/celulares"} className="btn btn-dark btn-lg rounded-0 rounded-end-4">Ir a Tienda de Celulares</Link>
                 <h3 className="text-white text-center mt-4 mb-3">Ingreso de Inventario</h3>
             </div>
-            <div className="bg-dark position-relative pt-4 rounded-3" style={{height: "400px", width: "55%", marginLeft: "22%"}} >
 
-                <div className="form-floating pt-3 ms-5 me-5 ps-5 pe-5">
-                    <input type="text" className="form-control" />
-                    <label htmlFor="" className="text-black ms-5" >ID:</label>
+            <form className="needs-validation" noValidate>
+                <div className="bg-dark position-relative pt-4 rounded-3 mb-2" style={{height: "100%", width: "55%", marginLeft: "22%"}} >
+
+                    <div className="form-floating pt-3 ms-5 me-5 ps-5 pe-5">
+                        <input type="text" className="form-control" readOnly />
+                        <label htmlFor="" className="text-black ms-5" >ID:</label>
+                    </div>
+
+                     <div className="d-inline-block w-50 position-relative text-center ">
+                        <div className="form-floating m-3">
+                            <input type="text" className="form-control" onChange={(e) => setMarca(e.target.value)} value={marca} required/>
+                            <label htmlFor="" className="text-black">Marca:</label>
+                            <div className="valid-feedback">Ok</div>
+                            <div className="invalid-feedback">Campo requerido</div>
+                        </div>                        
+
+                        <div className="form-floating m-3">
+                            <input type="text" className="form-control" onChange={(e) => setModelo(e.target.value)} value={modelo} required/>
+                            <label htmlFor="" className="text-black" >Modelo:</label>
+                            <div className="valid-feedback">Ok</div>
+                            <div className="invalid-feedback">Campo requerido</div>
+                        </div>                        
+
+                        <div className="form-floating m-3">
+                            <input type="text" className="form-control" onChange={(e) => setColor(e.target.value)} value={color} required/>
+                            <label htmlFor="" className="text-black" >Color:</label>
+                            <div className="valid-feedback">Ok</div>
+                            <div className="invalid-feedback">Campo requerido</div>
+                        </div>
+                            
+                            <button className="btn btn-danger mb-4" onClick={(event) => enviar(event)}>Agregar</button>
+                        </div>
+                        
+                        <div className="d-inline-block w-50 position-relative text-center ">
+                            <div className="form-floating m-3">
+                                <input type="text" className="form-control" onChange={(e) => setDescripcion(e.target.value)} value={descripcion} required />
+                                <label htmlFor="" className="text-black" >Descripcion:</label>
+                                <div className="valid-feedback">Ok</div>
+                                <div className="invalid-feedback">Campo requerido</div>
+                            </div>
+                            
+                            <div className="form-floating m-3">
+                                <input type="text" className="form-control" onChange={(e) => setPrecio(e.target.value)} value={precio} required/>
+                                <label htmlFor="" className="text-black" >Precio:</label>
+                                <div className="valid-feedback">Ok</div>
+                                <div className="invalid-feedback">Campo requerido</div>
+                            </div>
+                            
+                            <div className="form-floating m-3">
+                                <input type="text" className="form-control" onChange={(e) => setOperadora(e.target.value)} value={operadora} required/>
+                                <label htmlFor="" className="text-black" >Operadora:</label>
+                                <div className="valid-feedback">Ok</div>
+                                <div className="invalid-feedback">Campo requerido</div>
+                            </div>
+                            
+
+                            <button className="btn btn-danger mb-4" onClick={() => navigate("/celulares")}>Cancelar</button>
+                        </div>
                 </div>
-
-                <div className="d-inline-block w-50 position-relative text-center ">
-                    <div className="form-floating m-3">
-                        <input type="text" className="form-control" />
-                        <label htmlFor="" className="text-black" >Marca:</label>
-                    </div>
-                    
-
-                    <div className="form-floating m-3">
-                        <input type="text" className="form-control"/>
-                        <label htmlFor="" className="text-black">Modelo:</label>
-                    </div>
-                    
-
-                    <div className="form-floating m-3">
-                        <input type="text" className="form-control"/>
-                        <label htmlFor="" className="text-black">Color:</label>
-                    </div>
-                    
-
-                    <button className="btn btn-danger">Agregar</button>
-                </div>
-                
-                <div className="d-inline-block w-50 position-relative text-center ">
-                    <div className="form-floating m-3">
-                        <input type="text" className="form-control" />
-                        <label htmlFor="" className="text-black">Descripcion:</label>
-                    </div>
-                    
-                    <div className="form-floating m-3">
-                        <input type="text" className="form-control"/>
-                        <label htmlFor="" className="text-black">Precio:</label>
-                    </div>
-                    
-                    <div className="form-floating m-3">
-                        <input type="text" className="form-control" />
-                        <label htmlFor="" className="text-black">Operadora:</label>
-                    </div>
-                    
-
-                    <button className="btn btn-danger">Cancelar</button>
-                </div>
-            </div>
-        </body>
+            </form>
+        </div>
     )
 }
 

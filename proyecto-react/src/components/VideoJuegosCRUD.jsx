@@ -16,7 +16,7 @@ function VideoJuegosCRUD() {
     ];
 
     return (
-        <body className="bg-dark" style={{ height: "100vh" }}>
+        <div className="bg-dark pb-5" style={{ height: "100%" }}>
 
             <div className="container-fluid">
 
@@ -53,7 +53,7 @@ function VideoJuegosCRUD() {
                     </table>
                 </div>
             </div>
-        </body>
+        </div>
     )
 }
 

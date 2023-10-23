@@ -171,7 +171,7 @@ function VideoJuegosFORM({api, del}){
     }*/
 
     return(
-        <body className="bg-dark pb-5" style={{height: "100vh"}}>
+        <div className="bg-dark pb-5" style={{height: "100vh"}}>
             
             <div>
                 <h1 className="text-white text-center pt-3">Tienda de Video Juegos</h1>
@@ -239,7 +239,7 @@ function VideoJuegosFORM({api, del}){
                     </div>
                 </form>
             </div>  
-        </body>
+        </div>
     )
 }
 
