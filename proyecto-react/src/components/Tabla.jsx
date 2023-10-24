@@ -33,8 +33,8 @@ function Tabla({cols, list, controlador}){
                                         })
                                     }
                                      <td>{}
-                                        <Link to={`/${controlador}/edit/${Object.values(item)[0]}`} className="btn btn-primary m-2"><i className="fa-solid fa-pen-to-square"></i> Editar</Link>
-                                        <Link  to={`/${controlador}/delete/${Object.values(item)[0]}`} className="btn btn-danger"><i className="fa-solid fa-trash"></i> Eliminar</Link>
+                                        <Link to={`/${controlador}/delete/${Object.values(item)[0]}`} className="btn btn-danger"><i className="fa-solid fa-trash"></i> Eliminar</Link>
+                                        <Link to={`/${controlador}/edit/${Object.values(item)[0]}`} className="btn btn-secondary m-2"><i className="fa-solid fa-pen-to-square"></i> Editar</Link>
                                     </td>
                                 </tr>
                             })
