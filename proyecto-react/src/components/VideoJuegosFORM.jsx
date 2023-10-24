@@ -67,7 +67,9 @@ function VideoJuegosFORM({api}){
                             <div className="valid-feedback">Ok</div>
                             <div className="invalid-feedback">Campo requerido</div>
                         </div>
-                            
+                        {
+                        //<button className={`btn btn-danger`} onClick={(e) => enviar(e)}>{id === undefined ? "Agregar" : del === undefined ? "Editar" : "Eliminar"}</button>
+                        }
                             <button className="btn btn-danger mb-4" onClick={(event) => enviar(event)}>Agregar</button>
                         </div>
                         
