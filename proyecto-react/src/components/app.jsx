@@ -24,7 +24,6 @@ function App(){
                 <Route path="/viedeoJuegos" element={<VideoJuegosCRUD></VideoJuegosCRUD>}></Route>
                 <Route path="*" element={<NotFound></NotFound>}></Route>
                 <Route path="/celularesFORM" element={<CelularesFORM></CelularesFORM>}></Route>
-                <Route path="/viedeoJuegosFORM" element={<VideoJuegosFORM></VideoJuegosFORM>}></Route>
 
             </Routes>
         </BrowserRouter>
