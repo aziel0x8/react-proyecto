@@ -147,16 +147,16 @@ function VideoJuegosFORM({api2, del}){
     }
 
     return(
-        <div className="bg-danger pb-5" style={{height: "100%"}}>
+        <div className="bg-dark pb-5" style={{width:"100hv", height:"100hv", display: "flex", flexDirection: "column", margin: "0"}}>
             
             <div>
                 <h1 className="text-white text-center pt-3 ">Tienda de Videojuegos</h1>
-                <Link to={"/viedeoJuegos"} className="btn btn-dark btn-lg rounded-0 rounded-end-4">Ir a Tienda de Videojuegos</Link>
+                <Link to={"/viedeoJuegos"} className="btn btn-danger btn-lg rounded-0 rounded-end-4">Ir a Tienda de Videojuegos</Link>
                 <h3 className="text-white text-center mt-4 mb-3">Ingreso de Inventario</h3>
             </div>
 
             <form className="needs-validation" noValidate>
-                <div className="bg-dark position-relative pt-4 rounded-3 mb-2" style={{height: "100%", width: "55%", marginLeft: "22%"}} >
+                <div className="bg-danger position-relative pt-4 rounded-3 mb-2" style={{height: "100%", width: "55%", marginLeft: "22%"}} >
 
                     
                      <div className="d-inline-block w-50 position-relative text-center ">
@@ -179,7 +179,7 @@ function VideoJuegosFORM({api2, del}){
                             <div className="invalid-feedback">Campo requerido</div>
                         </div>                        
 
-                            <button className="btn btn-danger mb-4" onClick={(event) => enviar(event)}>{id === undefined ? "Agregar" : del === undefined ? "Editar" : "Eliminar"}</button>
+                            <button className="btn btn-dark mb-4" onClick={(event) => enviar(event)}>{id === undefined ? "Agregar" : del === undefined ? "Editar" : "Eliminar"}</button>
                         </div>
                         
                         <div className="d-inline-block w-50 position-relative text-center ">
@@ -204,7 +204,7 @@ function VideoJuegosFORM({api2, del}){
                                 <div className="invalid-feedback">Campo requerido</div>
                             </div>
 
-                            <button className="btn btn-danger mb-4" onClick={() => navigate("/viedeoJuegos")}>Cancelar</button>
+                            <button className="btn btn-dark mb-4" onClick={() => navigate("/viedeoJuegos")}>Cancelar</button>
                         </div>
                 </div>
             </form>

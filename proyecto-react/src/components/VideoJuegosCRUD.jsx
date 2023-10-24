@@ -25,7 +25,7 @@ function VideoJuegosCRUD({api2}) {
     }
 
     return (
-        <div className="bg-dark pb-5 pisition-sticky" style={{height: "100%", display: "flex", flexDirection: "column"}}>
+        <div className="bg-dark pb-5 pisition-sticky" style={{width:"100hv", height:"100hv", display: "flex", flexDirection: "column", margin: "0"}}>
 
             <div className="">
 
