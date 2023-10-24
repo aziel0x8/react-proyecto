@@ -18,6 +18,9 @@ function App(){
             <Routes>
                 <Route path="/" element={<Home></Home>} ></Route>
                 <Route path="/celulares" element={<CelularesCRUD api={apiCelulares}/>}></Route>
+                <Route path="/celulares/add" element={<CelularesFORM api={apiCelulares} />} />
+                <Route path="/celulares/edit/:id" element={<CelularesFORM api={apiCelulares} />} />
+                <Route path="/celulares/delete/:id" element={<CelularesFORM del={true} api={apiCelulares} />} />
                 <Route path="/viedeoJuegos" element={<VideoJuegosCRUD />} />
                 <Route path="/viedeoJuegos/add" element={<VideoJuegosFORM />} />
                 <Route path="/viedeoJuegos/edit/:id" element={<VideoJuegosFORM />} />
