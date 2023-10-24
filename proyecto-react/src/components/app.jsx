@@ -16,10 +16,12 @@ function App(){
             <Routes>
                 <Route path="/" element={<Home></Home>} ></Route>
                 <Route path="/celulares" element={<CelularesCRUD></CelularesCRUD>}></Route>
-                <Route path="/viedeoJuegos" element={<VideoJuegosCRUD></VideoJuegosCRUD>}></Route>
+                <Route path="/viedeoJuegos/" element={<VideoJuegosCRUD/>} />
+                <Route path="/viedeoJuegos/add" element={<VideoJuegosFORM/>} />
+                <Route path="/viedeoJuegos/edit/:id" element={<VideoJuegosFORM/>} />
+                <Route path="/viedeoJuegos/delete/:id" element={<VideoJuegosFORM del={true}/>} />
                 <Route path="*" element={<NotFound></NotFound>}></Route>
                 <Route path="/celularesFORM" element={<CelularesFORM></CelularesFORM>}></Route>
-                <Route path="/viedeoJuegosFORM" element={<VideoJuegosFORM></VideoJuegosFORM>}></Route>
 
             </Routes>
         </BrowserRouter>

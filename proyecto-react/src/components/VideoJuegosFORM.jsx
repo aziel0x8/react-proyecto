@@ -215,6 +215,7 @@ function VideoJuegosFORM({api, del}){
                         {
                         //<button className={`btn btn-dark`} onClick={(e) => enviar(e)}>{id === undefined ? "Agregar" : del === undefined ? "Editar" : "Eliminar"}</button>
                         }
+                        
                         <button className="btn btn-dark">Agregar</button>
                     </div>
                     

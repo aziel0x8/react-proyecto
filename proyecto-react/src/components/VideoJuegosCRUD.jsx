@@ -22,7 +22,7 @@ function VideoJuegosCRUD() {
 
                 <h1 className="text-white text-center pt-3">Tienda de Video Juegos</h1>
                 {/* <button className="btn btn-danger btn-lg rounded-0 rounded-end-4 mb-4">Ingresar nuevo registro</button> */}
-                <Link to={"/viedeoJuegosFORM"} className="btn btn-danger btn-lg rounded-0 rounded-end-4 mb-4">Ingresar nuevo registro</Link>
+                <Link to={"/viedeoJuegos/add"} className="btn btn-danger btn-lg rounded-0 rounded-end-4 mb-4">Ingresar nuevo registro</Link>
                 <h3 className="text-white text-center mt-4">Consultar Inventario</h3>
 
                 <div className="col-md-10 mx-auto mt-4">
@@ -44,8 +44,8 @@ function VideoJuegosCRUD() {
                                     <td>{item.precio}</td>
                                     <td>{item.cantidad}</td>
                                     <td>
-                                        <Link to={"/viedeoJuegosFORM"} className="btn btn-danger btn-sm mr-2">Eliminar</Link>
-                                        <Link to={"/viedeoJuegosFORM"} className="btn btn-secondary btn-sm">Editar</Link>
+                                        <Link to={`/viedeoJuegos/delete/${Object.values(item)[0]}`} className="btn btn-danger btn-sm mr-2">Eliminar</Link>
+                                        <Link to={`/viedeoJuegos/edit/${Object.values(item)[0]}`} className="btn btn-secondary btn-sm">Editar</Link>
                                     </td>
                                 </tr>
                             ))}
