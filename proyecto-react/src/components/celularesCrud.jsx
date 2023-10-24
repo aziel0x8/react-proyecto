@@ -1,7 +1,32 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
 
-function CelularesCRUD(){
+import React, {useState, useEffect} from "react";
+import Tabla from "./Tabla";
+import axios from "axios";
+
+function CelularesCRUD({api}){
+
+    const[autores, setAutores] = useState()
+
+    useEffect(() =>{
+        cargarAutores()// Invoca la solicitud del metodo que devuelve los autores
+    }, [])
+
+    async function cargarAutores(){
+        try{
+            let res = await axios(api)// Solicitud de tipo GET hacia autores
+            let data = await res.data// Convertimos el resultado en un array de objetos de tipo autor
+
+            //console.log(data)
+            setAutores(data)// El listado de los autores se envia al estado llamado Autores
+        }
+        catch(error){
+            alert(error)
+            console.log(error)
+        }
+    }
+
 
     return(
 
@@ -15,34 +40,30 @@ function CelularesCRUD(){
             </div>
             <div className="col-md-10 mx-auto mt-4">
             <div >
-            <table className="table table-bordered rounded">
-                        <thead>
-                            <tr>
-                                <th scope="col">celularId</th>
+           
+
+            {
+                autores === undefined ?
+                    <div>
+                        <div className="spinner-border" role="status">
+                            <span className="visually-hidden">Cargando Datos..</span>
+                            
+                        </div>
+                        <h1>Cargando</h1>
+                    </div>
+                :
+                <Tabla controlador={"autores"} list={autores} cols={["CelularId", "Marca", "Modelo", "Color", "Precio", "Descripcion", "Operadora", "Operaciones"]} />
+            }
+                                 {/* <th scope="col">celularId</th>
                                 <th scope="col">marca</th>
                                 <th scope="col">modelo</th>
                                 <th scope="col">color</th>
                                 <th scope="col">precio</th>
                                 <th scope="col">precio</th>
                                 <th scope="col">descripcion</th>
-                                <th scope="col">operadora</th>
-                            </tr>
-                        </thead>
-                        {/* <tbody>
-                            {dummyData.map((item, index) => (
-                                <tr key={index}>
-                                    <td>{item.producto}</td>
-                                    <td>{item.idProducto}</td>
-                                    <td>{item.precio}</td>
-                                    <td>{item.cantidad}</td>
-                                    <td>
-                                        <button className="btn btn-danger btn-sm mr-2">Eliminar</button>
-                                        <button className="btn btn-secondary btn-sm">Editar</button>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody> */}
-                    </table>
+                                <th scope="col">operadora</th>   */}
+                          
+                      
             </div>
             </div>
         </div>
