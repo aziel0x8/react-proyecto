@@ -1,4 +1,3 @@
-
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./home";
 import CelularesCRUD from "./celularesCrud";
@@ -10,8 +9,6 @@ import VideoJuegosFORM from "./VideoJuegosFORM";
 
 import React, {useState} from "react";
 
-
-
 function App(){
     const[apiCelulares, setApiCelulares] = useState("https://denny2023.azurewebsites.net/api/celulares")
 
@@ -21,13 +18,13 @@ function App(){
             <Routes>
                 <Route path="/" element={<Home></Home>} ></Route>
                 <Route path="/celulares" element={<CelularesCRUD api={apiCelulares}/>}></Route>
-                <Route path="/viedeoJuegos" element={<VideoJuegosCRUD></VideoJuegosCRUD>}></Route>
-                <Route path="*" element={<NotFound></NotFound>}></Route>
+                <Route path="/videoJuegos" element={<VideoJuegosCRUD></VideoJuegosCRUD>}></Route>
+                <Route path="/videoJuegosFORM" element={<VideoJuegosFORM></VideoJuegosFORM>}></Route>
                 <Route path="/celularesFORM" element={<CelularesFORM></CelularesFORM>}></Route>
-
+                <Route path="*" element={<NotFound></NotFound>}></Route>
             </Routes>
         </BrowserRouter>
     )
 }
 
-export default App
+export default App;
