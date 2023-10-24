@@ -7,19 +7,18 @@ import axios from "axios";
 
 function CelularesCRUD({api}){
 
-    const[autores, setAutores] = useState()
+    const[celulares, setCelulares] = useState()
 
     useEffect(() =>{
-        cargarAutores()// Invoca la solicitud del metodo que devuelve los autores
+        cargarCelulares()
     }, [])
 
-    async function cargarAutores(){
+    async function cargarCelulares(){
         try{
-            let res = await axios(api)// Solicitud de tipo GET hacia autores
-            let data = await res.data// Convertimos el resultado en un array de objetos de tipo autor
+            let res = await axios(api)
+            let data = await res.data
 
-            //console.log(data)
-            setAutores(data)// El listado de los autores se envia al estado llamado Autores
+            setCelulares(data)
         }
         catch(error){
             alert(error)
@@ -35,15 +34,12 @@ function CelularesCRUD({api}){
             <div>
                 <h1 className="text-white text-center pt-3">Tienda de Celulares</h1>
                 
-                <Link to={"/celularesFORM"} className="btn btn-dark btn-lg rounded-0 rounded-end-4">Ingresar nuevo registro</Link>
+                <Link to={"/celulares/add"} className="btn btn-dark btn-lg rounded-0 rounded-end-4">Ingresar nuevo registro</Link>
                 <h3 className="text-white text-center mt-4">Consultar Inventario</h3>
             </div>
             <div className="col-md-10 mx-auto mt-4">
-            <div >
-           
-
             {
-                autores === undefined ?
+                celulares === undefined ?
                     <div>
                         <div className="spinner-border" role="status">
                             <span className="visually-hidden">Cargando Datos..</span>
@@ -52,19 +48,8 @@ function CelularesCRUD({api}){
                         <h1>Cargando</h1>
                     </div>
                 :
-                <Tabla controlador={"autores"} list={autores} cols={["CelularId", "Marca", "Modelo", "Color", "Precio", "Descripcion", "Operadora", "Operaciones"]} />
+                <Tabla controlador={"celulares"} list={celulares} cols={["CelularId", "Marca", "Modelo", "Color", "Precio", "Descripcion", "Operadora", "Operaciones"]} />
             }
-                                 {/* <th scope="col">celularId</th>
-                                <th scope="col">marca</th>
-                                <th scope="col">modelo</th>
-                                <th scope="col">color</th>
-                                <th scope="col">precio</th>
-                                <th scope="col">precio</th>
-                                <th scope="col">descripcion</th>
-                                <th scope="col">operadora</th>   */}
-                          
-                      
-            </div>
             </div>
         </div>
     )
