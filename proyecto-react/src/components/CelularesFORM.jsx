@@ -136,8 +136,12 @@ function CelularesFORM({api, del}){
             // Por lo cual procedemos a ejecutar la accion (guardar, editar, eliminar)
             if (id === undefined) // Si el id es undefined significa que es un nuevo registro
                 guardar() //Invoca a la funcion guardar()
-            else if (del === undefined) // Si del es undefined significa que desea editar
+            else if (del === undefined){
+                let respuesta = window.confirm("Esta seguro que desea editar?") // Solicitamos confirmacion del usuario
+                if (respuesta === true) //verificamos la respuesta
                 editar()
+            } // Si del es undefined significa que desea editar
+                
             else {//se desea eliminar
                 let respuesta = window.confirm("Esta seguro que desea eliminar?") // Solicitamos confirmacion del usuario
                 if (respuesta === true) //verificamos la respuesta
@@ -188,7 +192,7 @@ function CelularesFORM({api, del}){
                             <div className="valid-feedback">Ok</div>
                             <div className="invalid-feedback">Campo requerido</div>
                         </div>
-                            <button className={`btn btn-danger`} onClick={(e) => enviar(e)}>{id === undefined ? "Agregar" : del === undefined ? "Editar" : "Eliminar"}</button>
+                            <button className={`btn btn-danger mb-4`} onClick={(e) => enviar(e)}>{id === undefined ? "Agregar" : del === undefined ? "Editar" : "Eliminar"}</button>
                         </div>
                         
                         <div className="d-inline-block w-50 position-relative text-center ">

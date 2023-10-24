@@ -8,7 +8,7 @@ function Tabla({cols, list, controlador}){
     console.log("controlador", controlador)
 
     return(
-        <div>
+        <div className=""> 
             <table className="table table-striped">
                 <thead>
                     <tr>
@@ -33,8 +33,10 @@ function Tabla({cols, list, controlador}){
                                         })
                                     }
                                      <td>{}
+                                        <div className="d-inline-flex gap-1">
                                         <Link to={`/${controlador}/delete/${Object.values(item)[0]}`} className="btn btn-danger"><i className="fa-solid fa-trash"></i> Eliminar</Link>
-                                        <Link to={`/${controlador}/edit/${Object.values(item)[0]}`} className="btn btn-secondary m-2"><i className="fa-solid fa-pen-to-square"></i> Editar</Link>
+                                        <Link to={`/${controlador}/edit/${Object.values(item)[0]}`} className="btn btn-secondary "><i className="fa-solid fa-pen-to-square"></i> Editar</Link>
+                                        </div>
                                     </td>
                                 </tr>
                             })

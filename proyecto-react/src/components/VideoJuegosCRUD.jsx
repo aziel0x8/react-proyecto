@@ -1,55 +1,52 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
+import Tabla from "./Tabla";
+import axios from "axios";
 
-function VideoJuegosCRUD() {
+function VideoJuegosCRUD({api2}) {
 
-    const dummyData = [
-        { JuegoID: "SMO123", Titulo: "Super Mario Odyssey", Descripcion: "Aventura con Mario", Plataforma: "Switch", Precio: "$49.99", Categoria: "Aventura" },
-        // ... otros registros
-    ];
+    const[juegos, setJuegos] = useState()
+
+    useEffect(() =>{
+        cargarJuegos()
+    }, [])
+
+    async function cargarJuegos(){
+        try{
+            let res = await axios(api2)
+            let data = await res.data
+
+            setJuegos(data)
+        }
+        catch(error){
+            alert(error)
+            console.log(error)
+        }
+    }
 
     return (
-        <div className="bg-dark pb-5" style={{ height: "100%" }}>
+        <div className="bg-dark pb-5 pisition-sticky" style={{height: "100%", display: "flex", flexDirection: "column"}}>
 
-            <div className="container-fluid">
+            <div className="">
 
                 <h1 className="text-white text-center pt-3">Tienda de Video Juegos</h1>
-                <Link to={"/viedeoJuegos/add"} className="btn btn-danger btn-lg rounded-0 rounded-end-4 mb-4">Ingresar nuevo registro</Link>
+                <Link to={"/viedeoJuegos/add"} className="btn btn-danger btn-lg rounded-0 rounded-end-4 mb-4" style={{}}>Ingresar nuevo registro</Link>
                 <h3 className="text-white text-center mt-4">Consultar Inventario</h3>
+            </div>
 
-                <div className="col-md-10 mx-auto mt-4">
-                    <div className="table-responsive"> 
-                        <table className="table" style={{ backgroundColor: 'transparent' }}>
-                            <thead className="border-bottom" style={{ backgroundColor: 'transparent' }}>
-                                <tr style={{ backgroundColor: 'transparent' }}>
-                                    <th scope="col">JuegoID</th>
-                                    <th scope="col">Titulo</th>
-                                    <th scope="col">Descripcion</th>
-                                    <th scope="col">Plataforma</th>
-                                    <th scope="col">Precio</th>
-                                    <th scope="col">Categoria</th>
-                                    <th scope="col">Acciones</th>
-                                </tr>
-                            </thead>
-                            <tbody style={{ backgroundColor: 'transparent' }}>
-                                {dummyData.map((item, index) => (
-                                    <tr key={index} className="border-bottom" style={{ backgroundColor: 'transparent' }}>
-                                        <td>{item.JuegoID}</td>
-                                        <td>{item.Titulo}</td>
-                                        <td>{item.Descripcion}</td>
-                                        <td>{item.Plataforma}</td>
-                                        <td>{item.Precio}</td>
-                                        <td>{item.Categoria}</td>
-                                        <td>
-                                            <Link to={`/viedeoJuegos/delete/${Object.values(item)[0]}`} className="btn btn-danger btn-sm mr-2">Eliminar</Link>
-                                            <Link to={`/viedeoJuegos/edit/${Object.values(item)[0]}`} className="btn btn-secondary btn-sm">Editar</Link>
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
+            <div className="col-md-10 mx-auto mt-4">
+            {
+                juegos === undefined ?
+                    <div className="text-white">
+                        <div className="spinner-border" role="status">
+                            <span className="visually-hidden">Cargando Datos..</span>
+                            
+                        </div>
+                        <h1>Cargando</h1>
                     </div>
-                </div>
+                :
+                <Tabla controlador={"viedeoJuegos"} list={juegos} cols={["JuegoID", "Titulo", "Descripcion", "Plataforma", "Precio", "Categoria", "Operaciones"]} />
+            }  
             </div>
         </div>
     )
