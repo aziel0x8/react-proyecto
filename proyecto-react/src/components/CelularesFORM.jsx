@@ -156,7 +156,7 @@ function CelularesFORM({api, del}){
             <div>
                
                 <h1 className="text-white text-center pt-3 ">Tienda de Celulares</h1>
-                <Link to={"/celulares"} className="btn btn-dark btn-lg rounded-0 rounded-end-4">Ir a Tienda de Celulares</Link>
+                <Link to={"/celulares"} className="btn btn-dark btn-lg rounded-0 rounded-end-4"><i class="bi bi-arrow-left-square pe-2"></i>Ir a Tienda de Celulares</Link>
                 <h3 className="text-white text-center mt-4 mb-3">Ingreso de Inventario</h3>
             </div>
 
@@ -192,7 +192,10 @@ function CelularesFORM({api, del}){
                             <div className="valid-feedback">Ok</div>
                             <div className="invalid-feedback">Campo requerido</div>
                         </div>
-                            <button className={`btn btn-danger mb-4`} onClick={(e) => enviar(e)}>{id === undefined ? "Agregar" : del === undefined ? "Editar" : "Eliminar"}</button>
+                        <button className="btn btn-danger mb-4" onClick={(event) => enviar(event)}>
+                            <i className={`bi bi-${id === undefined ? "plus-square" : del === undefined ? "pencil" : "trash3"} pe-2`}></i>
+                            {id === undefined ? "Agregar" : del === undefined ? "Editar" : "Eliminar"}
+                        </button>
                         </div>
                         
                         <div className="d-inline-block w-50 position-relative text-center ">
@@ -218,7 +221,7 @@ function CelularesFORM({api, del}){
                             </div>
                             
 
-                            <button className="btn btn-danger mb-4" onClick={() => navigate("/celulares")}>Cancelar</button>
+                        <button className="btn btn-danger mb-4" onClick={() => navigate("/celulares")}><i class="bi bi-x-square pe-2"></i>Cancelar</button>
                         </div>
                 </div>
             </form>

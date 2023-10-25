@@ -151,7 +151,7 @@ function VideoJuegosFORM({api2, del}){
             
             <div>
                 <h1 className="text-white text-center pt-3 ">Tienda de Videojuegos</h1>
-                <Link to={"/viedeoJuegos"} className="btn btn-danger btn-lg rounded-0 rounded-end-4">Ir a Tienda de Videojuegos</Link>
+                <Link to={"/viedeoJuegos"} className="btn btn-danger btn-lg rounded-0 rounded-end-4"><i class="bi bi-arrow-left-square pe-2"></i>Ir a Tienda de Videojuegos</Link>
                 <h3 className="text-white text-center mt-4 mb-5">Ingreso de Inventario</h3>
             </div>
 
@@ -178,8 +178,10 @@ function VideoJuegosFORM({api2, del}){
                             <div className="valid-feedback">Ok</div>
                             <div className="invalid-feedback text-white">Campo requerido</div>
                         </div>                        
-
-                            <button className="btn btn-dark mb-4" onClick={(event) => enviar(event)}>{id === undefined ? "Agregar" : del === undefined ? "Editar" : "Eliminar"}</button>
+                            <button className="btn btn-dark mb-4" onClick={(event) => enviar(event)}>
+                            <i className={`bi bi-${id === undefined ? "plus-square" : del === undefined ? "pencil" : "trash3"} pe-2`}></i>
+                                {id === undefined ? "Agregar" : del === undefined ? "Editar" : "Eliminar"}
+                            </button>
                         </div>
                         
                         <div className="d-inline-block w-50 position-relative text-center ">
@@ -204,7 +206,7 @@ function VideoJuegosFORM({api2, del}){
                                 <div className="invalid-feedback text-white">Campo requerido</div>
                             </div>
 
-                            <button className="btn btn-dark mb-4" onClick={() => navigate("/viedeoJuegos")}>Cancelar</button>
+                        <button className="btn btn-dark mb-4" onClick={() => navigate("/viedeoJuegos")}><i class="bi bi-x-square pe-2"></i>Cancelar</button>
                         </div>
                 </div>
             </form>

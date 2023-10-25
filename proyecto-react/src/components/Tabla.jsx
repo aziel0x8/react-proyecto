@@ -34,8 +34,8 @@ function Tabla({cols, list, controlador}){
                                     }
                                      <td>{}
                                         <div className="d-inline-flex gap-1">
-                                        <Link to={`/${controlador}/delete/${Object.values(item)[0]}`} className="btn btn-danger"><i className="fa-solid fa-trash"></i> Eliminar</Link>
-                                        <Link to={`/${controlador}/edit/${Object.values(item)[0]}`} className="btn btn-secondary "><i className="fa-solid fa-pen-to-square"></i> Editar</Link>
+                                            <Link to={`/${controlador}/delete/${Object.values(item)[0]}`} className="btn btn-danger d-inline-flex gap-1"><i className="fa-solid fa-trash bi bi-trash3 "></i> Eliminar</Link>
+                                        <Link to={`/${controlador}/edit/${Object.values(item)[0]}`} className="btn btn-secondary d-inline-flex gap-1"><i className="fa-solid fa-pen-to-square bi bi-pencil"></i> Editar</Link>
                                         </div>
                                     </td>
                                 </tr>

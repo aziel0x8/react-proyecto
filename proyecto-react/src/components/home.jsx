@@ -9,7 +9,7 @@ function Home(){
                 <div className="position-relative top-50 start-50 translate-middle text-center">
                     <h1 className="text-white ">Tienda de Celulares</h1>
                     {/* <button ></button> */}
-                    <Link to={"/celulares"} className="btn btn-dark mt-5">Ir a la Tienda</Link>
+                    <Link to={"/celulares"} className="btn btn-dark mt-5">Ir a la Tienda<i class="bi bi-phone ps-2"></i></Link>
                     
                 </div>
                 
@@ -19,7 +19,7 @@ function Home(){
                 <div className="position-relative top-50 start-50 translate-middle text-center">
                     <h1 className="text-white ">Tienda de Video Juegos</h1>
                     {/* <button className="btn btn-danger mt-5">Ir a la Tienda</button> */}
-                    <Link to={"/viedeoJuegos"} className="btn btn-danger mt-5">Ir a la Tienda</Link>
+                    <Link to={"/viedeoJuegos"} className="btn btn-danger mt-5">Ir a la Tienda<i class="bi bi-joystick ps-2"></i></Link>
                 </div> 
             </div>
         </div>

@@ -30,7 +30,7 @@ function VideoJuegosCRUD({api2}) {
             <div className="">
 
                 <h1 className="text-white text-center pt-3">Tienda de Video Juegos</h1>
-                <Link to={"/viedeoJuegos/add"} className="btn btn-danger btn-lg rounded-0 rounded-end-4 mb-4" style={{}}>Ingresar nuevo registro</Link>
+                <Link to={"/viedeoJuegos/add"} className="btn btn-danger btn-lg rounded-0 rounded-end-4 mb-4" style={{}}>Ingresar nuevo registro<i class="bi bi-floppy ps-2"></i></Link>
                 <h3 className="text-white text-center mt-4">Consultar Inventario</h3>
             </div>
 
