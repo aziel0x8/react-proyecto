@@ -29,7 +29,7 @@ function CelularesCRUD({api}){
 
     return(
 
-        <div className="bg-danger pb-5" style={{width:"100hv", height:"100hv", display: "flex", flexDirection: "column", margin: "0"}}>
+        <div className="bg-danger pb-5" style={{height:"100%", display: "flex", flexDirection: "column", margin: "0"}}>
             
             <div>
                 <h1 className="text-white text-center pt-3">Tienda de Celulares</h1>

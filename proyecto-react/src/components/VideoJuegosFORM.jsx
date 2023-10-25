@@ -147,7 +147,7 @@ function VideoJuegosFORM({api2, del}){
     }
 
     return(
-        <div className="bg-dark pb-5" style={{width:"100hv", height:"100hv", display: "flex", flexDirection: "column", margin: "0"}}>
+        <div className="bg-dark pb-5" style={{width:"100%", display: "flex", flexDirection: "column", margin: "0"}}>
             
             <div>
                 <h1 className="text-white text-center pt-3 ">Tienda de Videojuegos</h1>
