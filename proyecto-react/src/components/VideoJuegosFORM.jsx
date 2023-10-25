@@ -169,14 +169,14 @@ function VideoJuegosFORM({api2, del}){
                             <input type="text" className="form-control" onChange={(e) => setTitulo(e.target.value)} disabled={del === undefined ? false : true} value={titulo} required/>
                             <label htmlFor="" className="text-black">Titulo:</label>
                             <div className="valid-feedback">Ok</div>
-                            <div className="invalid-feedback">Campo requerido</div>
+                            <div className="invalid-feedback text-white">Campo requerido</div>
                         </div>                        
 
                         <div className="form-floating m-3">
                             <input type="text" className="form-control" onChange={(e) => setDescripcion(e.target.value)} disabled={del === undefined ? false : true} value={descripcion} required/>
                             <label htmlFor="" className="text-black">Descripcion:</label>
                             <div className="valid-feedback">Ok</div>
-                            <div className="invalid-feedback">Campo requerido</div>
+                            <div className="invalid-feedback text-white">Campo requerido</div>
                         </div>                        
 
                             <button className="btn btn-dark mb-4" onClick={(event) => enviar(event)}>{id === undefined ? "Agregar" : del === undefined ? "Editar" : "Eliminar"}</button>
@@ -187,21 +187,21 @@ function VideoJuegosFORM({api2, del}){
                                 <input type="text" className="form-control" onChange={(e) => setPlataforma(e.target.value)} disabled={del === undefined ? false : true} value={plataforma} required/>
                                 <label htmlFor="" className="text-black">Plataforma:</label>
                                 <div className="valid-feedback">Ok</div>
-                                <div className="invalid-feedback">Campo requerido</div>
+                                <div className="invalid-feedback text-white">Campo requerido</div>
                             </div>
 
                             <div className="form-floating m-3">
                                 <input type="text" className="form-control" onChange={(e) => setPrecio(e.target.value)} disabled={del === undefined ? false : true} value={precio} required/>
                                 <label htmlFor="" className="text-black">Precio:</label>
                                 <div className="valid-feedback">Ok</div>
-                                <div className="invalid-feedback">Campo requerido</div>
+                                <div className="invalid-feedback text-white">Campo requerido</div>
                             </div>
                             
                             <div className="form-floating m-3">
                                 <input type="text" className="form-control" onChange={(e) => setCategoria(e.target.value)} disabled={del === undefined ? false : true} value={categoria} required/>
                                 <label htmlFor="" className="text-black">Categoria:</label>
                                 <div className="valid-feedback">Ok</div>
-                                <div className="invalid-feedback">Campo requerido</div>
+                                <div className="invalid-feedback text-white">Campo requerido</div>
                             </div>
 
                             <button className="btn btn-dark mb-4" onClick={() => navigate("/viedeoJuegos")}>Cancelar</button>
