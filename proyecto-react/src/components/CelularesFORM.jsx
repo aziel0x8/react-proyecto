@@ -85,7 +85,7 @@ function CelularesFORM({api, del}){
             let res = await axios.put(api, celular)
             let data = await res.data 
 
-            if (data === 1) {
+            if (data.status === 1) {
                 alert(data.message)
                 navigate("/celulares")
             }

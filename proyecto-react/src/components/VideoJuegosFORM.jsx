@@ -82,7 +82,7 @@ function VideoJuegosFORM({api2, del}){
             let res = await axios.put(api2, celular)
             let data = await res.data 
 
-            if (data === 1) {
+            if (data.status === 1) {
                 alert(data.message)
                 navigate("/viedeoJuegos")
             }
