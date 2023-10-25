@@ -147,16 +147,16 @@ function VideoJuegosFORM({api2, del}){
     }
 
     return(
-        <div className="bg-dark pb-5" style={{height:"100%", display: "flex", flexDirection: "column", margin: "0"}}>
+        <div className="bg-dark " style={{ height: "93.57vh", display: "flex", flexDirection: "column", margin: "0", overflowY: "hidden"}}>
             
             <div>
                 <h1 className="text-white text-center pt-3 ">Tienda de Videojuegos</h1>
                 <Link to={"/viedeoJuegos"} className="btn btn-danger btn-lg rounded-0 rounded-end-4">Ir a Tienda de Videojuegos</Link>
-                <h3 className="text-white text-center mt-4 mb-3">Ingreso de Inventario</h3>
+                <h3 className="text-white text-center mt-4 mb-5">Ingreso de Inventario</h3>
             </div>
 
-            <form className="needs-validation" noValidate>
-                <div className="bg-danger position-relative pt-4 rounded-3 mb-2" style={{height: "100%", width: "55%", marginLeft: "22%"}} >
+            <form className="needs-validation " noValidate>
+                <div className="bg-danger position-relative pt-4 rounded-3 mb-2 " style={{height: "100%", width: "55%", marginLeft: "22%"}} >
 
                     
                      <div className="d-inline-block w-50 position-relative text-center ">

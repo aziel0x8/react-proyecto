@@ -151,7 +151,7 @@ function CelularesFORM({api, del}){
     }
 
     return(
-        <div className="bg-danger pb-5" style={{height:"100%", display: "flex", flexDirection: "column", margin: "0"}}>
+        <div className="bg-danger " style={{ height: "93.57vh", display: "flex", flexDirection: "column", margin: "0", overflowY: "hidden"}}>
             
             <div>
                
