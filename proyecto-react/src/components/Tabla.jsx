@@ -8,8 +8,8 @@ function Tabla({cols, list, controlador}){
     console.log("controlador", controlador)
 
     return(
-        <div className=""> 
-            <table className="table table-striped">
+        <div className="table-responsive" > 
+            <table className="table table-striped ">
                 <thead>
                     <tr>
                         {

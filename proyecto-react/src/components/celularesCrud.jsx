@@ -37,7 +37,7 @@ function CelularesCRUD({api}){
                 <Link to={"/celulares/add"} className="btn btn-dark btn-lg rounded-0 rounded-end-4">Ingresar nuevo registro<i class="bi bi-floppy ps-2"></i></Link>
                 <h3 className="text-white text-center mt-4">Consultar Inventario</h3>
             </div>
-            <div className="col-md-10 mx-auto mt-4">
+            <div className="ms-4 me-4 mt-4">
             {
                 celulares === undefined ?
                     <div>

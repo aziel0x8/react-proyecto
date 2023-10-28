@@ -25,7 +25,7 @@ function VideoJuegosCRUD({api2}) {
     }
 
     return (
-        <div className="bg-dark pb-5 pisition-sticky" style={{height:"100%", display: "flex", flexDirection: "column"}}>
+        <div className="bg-dark pb-5" style={{height:"100%", display: "flex", flexDirection: "column", margin: "0"}}>
 
             <div className="">
 
@@ -34,7 +34,7 @@ function VideoJuegosCRUD({api2}) {
                 <h3 className="text-white text-center mt-4">Consultar Inventario</h3>
             </div>
 
-            <div className="col-md-10 mx-auto mt-4">
+            <div className="ms-4 me-4 mt-4">
             {
                 juegos === undefined ?
                     <div className="text-white">
